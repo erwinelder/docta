@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    body {
+        margin: 0;
+        font-family: Manrope, sans-serif;
+        background-color: #121212;
+        color: #DEE2E8;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        row-gap: 3rem;
+        padding: 2rem 3rem;
+        margin-bottom: 10vh;
+    }
+
+    header > .heading-container {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: .4rem;
+        text-align: center;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 1.25rem;
+        margin-bottom: -5rem;
+    }
+    .logo-container img {
+        width: 6rem;
+    }
+    .logo-container h1 {
+        font-size: 7rem;
+        font-family: Poppins, serif;
+        font-weight: 700;
+        background: linear-gradient(0deg, #39527F, #587EBF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    header .heading-container p {
+        font-size: 1.3rem;
+        font-weight: 300;
+        letter-spacing: .04rem;
+        width: 16rem;
+    }
+
+    .download-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: .4rem;
+        margin-top: 1rem;
+    }
+    .download-link a {
+        font-size: 1.1rem;
+        color: #577BB8;
+        text-decoration: underline;
+        display: inline-block;
+    }
+    .arrow-icon {
+        width: 20px;
+    }
+
+    header > .screenshot-container {
+        width: 50%;
+        max-width: 500px;
+        height: 110vh;
+        margin-bottom: -10vh;
+    }
+    header .screenshot-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+
+
+    .one-screen-section {
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .one-screen-section .screenshot-container {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-screen-section .screenshot-container img {
+        height: 100%;
+    }
+
+    .one-screen-section .title-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .one-screen-section .section-title {
+        font-size: 2.5rem;
+        font-family: Noto Sans, sans-serif;
+        text-align: center;
+        padding-inline: 1rem;
+    }
+
+
+
+    .two-screens-section-mobile {
+        display: none;
+    }
+
+    .two-screens-section-desktop {
+        width: 100%;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .two-screens-section-desktop .screenshot-container {
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .two-screens-section-desktop .screenshot-container:first-child {
+        margin-left: 1rem;
+        padding-top: 5rem;
+    }
+    .two-screens-section-desktop .screenshot-container:last-child {
+        margin-right: 1rem;
+        padding-bottom: 5rem;
+    }
+    .two-screens-section-desktop .screenshot-container img {
+        height: 100%;
+    }
+
+    .two-screens-section-desktop .title-container {
+        max-width: 25rem;
+        padding-inline: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .two-screens-section-desktop .section-title {
+        font-size: 2rem;
+        font-family: Noto Sans, sans-serif;
+        text-align: center;
+        padding-inline: 1rem;
+    }
+
+
+
+    #distribution-links-container {
+        width: calc(100% - 2rem);
+        padding: 4rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+
+    #distribution-links-container > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    #distribution-links-container > div > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #distribution-links-container h2 {
+        font-size: 1.5rem;
+    }
+    #distribution-links-container h2:first-child {
+        margin-bottom: -0.5rem;
+    }
+    #distribution-links-container p {
+        font-size: 1rem;
+    }
+    #distribution-links-container a {
+        color: #577BB8;
+        text-decoration: underline;
+    }
+
+    .store-icon {
+        height: 3rem;
+    }
+
+
+
+    @media (max-width: 900px) {
+
+        header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+
+        header > .heading-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: .4rem;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 1.25rem;
+            margin-bottom: -5rem;
+        }
+        .logo-container img {
+            width: 5.5rem;
+        }
+        .logo-container h1 {
+            font-size: 6rem;
+            font-family: Poppins, serif;
+            font-weight: 700;
+            background: linear-gradient(0deg, #39527F, #587EBF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header .heading-container p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: .04rem;
+            width: 16rem;
+        }
+
+        .download-link {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: .4rem;
+            margin-top: 1rem;
+        }
+        .download-link a {
+            font-size: 1.05rem;
+            color: #577BB8;
+            text-decoration: underline;
+            display: inline-block;
+        }
+        .arrow-icon {
+            width: 18px;
+        }
+
+        header > .screenshot-container {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+        }
+        header .screenshot-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+
+        .one-screen-section {
+            width: 100%;
+            margin: 5vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .one-screen-section .screenshot-container {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: 1;
+        }
+        .one-screen-section .screenshot-container img {
+            height: 100%;
+        }
+
+        .one-screen-section .title-container {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .one-screen-section .section-title {
+            font-size: 2rem;
+            font-family: Noto Sans, sans-serif;
+            text-align: center;
+            padding-inline: 1rem;
+        }
+
+
+
+        .two-screens-section-desktop {
+            display: none;
+        }
+
+        .two-screens-section-mobile {
+            width: 100%;
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            row-gap: 2rem;
+        }
+
+        .two-screens-section-mobile .screenshot-container {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .two-screens-section-mobile .screenshot-container :first-child {
+            margin-left: 1rem;
+            padding-top: 5rem;
+        }
+        .two-screens-section-mobile .screenshot-container :last-child {
+            margin-right: 1rem;
+            padding-bottom: 5rem;
+        }
+        .two-screens-section-mobile .screenshot-container img {
+            height: 100%;
+        }
+
+        .two-screens-section-mobile .title-container {
+            width: 90%;
+            padding-inline: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .two-screens-section-mobile .section-title {
+            font-size: 2rem;
+            font-family: Noto Sans, sans-serif;
+            text-align: center;
+            padding-inline: 1rem;
+        }
+
+
+
+        #distribution-links-container {
+            width: calc(100% - 2rem);
+            margin-top: 5vh;
+            padding: 4rem 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            row-gap: 2rem;
+        }
+
+        #distribution-links-container > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1rem;
+        }
+
+        #distribution-links-container > div > div > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #distribution-links-container h2 {
+            font-size: 1.5rem;
+        }
+        #distribution-links-container h2:first-child {
+            margin-bottom: -0.5rem;
+        }
+        #distribution-links-container p {
+            font-size: 1rem;
+        }
+        #distribution-links-container a {
+            color: #577BB8;
+            text-decoration: underline;
+        }
+
+        .store-icon {
+            height: 3rem;
+        }
+
+    }
+</style>
+
+<header>
+    <div class="heading-container">
+        <div class="logo-container">
+            <img src="src/img/Docta_icon.svg" alt="Docta logo">
+            <h1>Docta</h1>
+        </div>
+        <p>A new, user-friendly way to practice CTU subjects in Prague.</p>
+        <div class="download-link">
+            <a href="#distribution-links-container">Download</a>
+            <img src="src/img/short_arrow_down_icon.svg" alt="arrow down" class="arrow-icon">
+        </div>
+    </div>
+    <div class="screenshot-container">
+        <img src="src/img/courses_screenshot.png" alt="courses screen">
+    </div>
+</header>
+
+
+
+<div class="one-screen-section">
+    <div class="screenshot-container">
+        <img src="src/img/lessons_screenshot.png" alt="lessons screen">
+    </div>
+    <div class="title-container">
+        <h2 class="section-title">Explore lessons that cover real CTU courses’ topics.</h2>
+    </div>
+</div>
+
+
+
+<div class="two-screens-section-desktop">
+    <div class="screenshot-container">
+        <img src="src/img/single_option_question_screenshot.png" alt="single option question screen">
+    </div>
+    <div class="title-container">
+        <h2 class="section-title">Practice diverse questions along with course materials. All in one place.</h2>
+    </div>
+    <div class="screenshot-container">
+        <img src="src/img/open_answer_question_screenshot.png" alt="open answer question screen">
+    </div>
+</div>
+
+<div class="two-screens-section-mobile">
+    <div class="title-container">
+        <h2 class="section-title">Practice diverse questions along with course materials. All in one place.</h2>
+    </div>
+    <div class="screenshot-container">
+        <img src="src/img/single_option_question_screenshot.png" alt="single option question screen">
+        <img src="src/img/open_answer_question_screenshot.png" alt="open answer question screen">
+    </div>
+</div>
+
+
+
+<footer id="distribution-links-container">
+
+    <div>
+        <h2>Download on Android</h2>
+
+        <div>
+            <div>
+                <p>1. Join Docta preview:</p>
+                <a href="https://groups.google.com/g/docta-preview">Google group link</a>
+            </div>
+            <div>
+                <p>2. Download from Google Play:</p>
+                <a href="https://play.google.com/store/apps/details?id=com.docta">
+                    <img class="store-icon" src="src/img/google_play_badge.png" alt="Google Play">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+        <h2 style="margin-top: 2rem;">Download on iOS</h2>
+        <a href="https://apps.apple.com/cz/app/docta-university-lessons/id6744309566">
+            <img class="store-icon" src="src/img/app_store_badge.svg" alt="App Store">
+        </a>
+    </div>
+
+</footer>
+
+</body>
+</html>
