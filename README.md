@@ -1,5 +1,7 @@
 # Docta
 
+[Website](https://erwinelder.github.io/docta/)
+
 [Google Play](https://play.google.com/store/apps/details?id=com.docta)
 
 [App Store](https://apps.apple.com/cz/app/docta-university-lessons/id6744309566)
