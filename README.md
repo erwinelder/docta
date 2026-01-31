@@ -1,6 +1,6 @@
 # Docta
 
-[Website](https://erwinelder.github.io/docta/)
+[Website](https://docta-edu.com)
 
 [Google Play](https://play.google.com/store/apps/details?id=com.docta)
 
