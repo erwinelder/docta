@@ -10,7 +10,7 @@
 
 Docta is an application designed to help students at CTU in Prague practice various school subjects.
 
-Students can complete exercises of different types and difficulty levels to improve their skills in specific subjects. In Docta, a subject is referred to as a “course.”
+Students can complete exercises of different types and difficulty levels to improve their skills in specific courses.
 
 Each course is divided into sections, sections into lessons, and lessons into questions. This structure allows students to practice at their own pace, aligning with the progression of their lectures. It also assists teachers by providing a structure similar to the lecture sequence, making course creation easier.
 
